@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list of workers</title>
+</head>
+<body>
+<button onclick="myFunctionTwo()">Submit</button>
+
+<table id="loop-table" style="width: 100%">
+    <thead>
+
+    </thead>
+</table>
+<script>
+    var personNames = ["Irfan mansoori", "Ahmed Uddin Usama", "Huzaifa Ahmed", "Zubair Khanzada", "Irfan Mansoori", "Ahmed Uddin Usama"];
+    var Registered = ["16:22 - 16.25", "15:33 - 16:19", "14:34 - 14:36", "14:8 - 14:22", "14:8 - 14-19", "14:8 - 14:14"];
+    var split = ["1", "1", "1", "1", "1", "1"];
+    var time= ["2m 54s", "15:33 - 16:19", "2m 11s", "13m 39s", "11m 25s", "5m 29s"];
+    var Type = ["0 PRODUCTIVE", "0 NEUTRAL", "0 PRODUCTIVE", "0 NEUTRAL", "0 NEUTRAL", "0 NEUTRAL"];
+    var Discription= ["Working", "resting", "Helping Usama", "Lunch Break", "Lunch", "Lunch"];
+    var counter = 0;
+    var len = 6;
+    function myFunctionTwo(){
+        if (counter< len){
+            var tableElement = document.getElementById('loop-table');
+            var rowElement = tableElement.insertRow();
+            rowElement.innerHTML =
+                "<tr>"+
+                "<td>"+personNames[counter]+"</td>" +
+                "<td>"+Registered[counter]+"</td>" +
+                "<td>"+split[counter]+"</td>" +
+                "<td>"+time[counter]+"</td>" +
+                "<td>"+Type[counter]+"</td>" +
+                "<td>"+Discription[counter]+"</td>" +
+                "</tr>" ;
+            counter++;
+        }
+    }
+    //     var tableElement = document.getElementById('loop-table');
+    //     var rowElement = tableElement.insertRow();
+    //     rowElement.innerHTML =
+    //         "<tr>"+
+    //         "<td>"+personNames[counter]+"</td>" +
+    //         "<td>"+Registered[counter]+"</td>" +
+    //         "<td>"+split[counter]+"</td>" +
+    //         "<td>"+time[counter]+"</td>" +
+    //         "<td>"+Type[counter]+"</td>" +
+    //         "<td>"+Discription[counter]+"</td>" +
+    //         "</tr>" ;
+    //     counter++;
+    // }
+
+</script>
+</body>
+</html>
